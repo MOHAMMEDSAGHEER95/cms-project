@@ -19,10 +19,11 @@
     <div class="card-body">
         <h1><%= article.title %></h1>
         <p style="color: blue;"><%= article.body %></p>
+        <p>id: <%= article._id %></p>
     </div>
     <div class="row">
         <div class="col-md-4">
-    <button class="btn btn-primary">Edit</button>
+    <button class="btn btn-primary" value="<%= article._id %>">Edit</button>
     <button class="btn btn-danger">Delete</button>
     
         </div>
