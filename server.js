@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
 const fruit = 'apple';
+app.set('view engine', 'ejs')
+
+
+
 app.get('/', (req, res) => {
-    res.send("hello");
+    res.render('index')
 })
 
 app.get('/hello', (req, res) => {
