@@ -1,12 +1,18 @@
 const express = require('express')
+const articleRouter = require('./routes/articles')
 const app = express()
 const fruit = 'apple';
+
 app.set('view engine', 'ejs')
+
+
+app.use('/articles', articleRouter)
+
 
 
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {key: 'Home'})
 })
 
 app.get('/hello', (req, res) => {
