@@ -1,5 +1,6 @@
 const express = require('express')
 const articleRouter = require('./routes/articles')
+const productRouter = require('./routes/products')
 const app = express()
 const fruit = 'apple';
 
@@ -7,6 +8,7 @@ app.set('view engine', 'ejs')
 
 app.use(express.urlencoded({extended: true}));
 app.use('/articles', articleRouter)
+app.use('/products', productRouter)
 
 
 

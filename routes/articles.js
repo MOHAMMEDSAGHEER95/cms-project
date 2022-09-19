@@ -24,8 +24,9 @@ router.post('/new', async (req, res) => {
 
     const article = new Article({
         title: req.body.title, 
-        body: req.body.title, 
+        body: req.body.body, 
     })
+    
     await article.save()
     res.redirect('/articles')
 

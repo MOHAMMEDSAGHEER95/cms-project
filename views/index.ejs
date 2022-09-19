@@ -13,7 +13,7 @@
     <h1>Blog Articles</h1>
     <a class="btn btn-success" href="/articles/new">Add Blog</a>
     
-
+    <%if (locals.articles) {%>
     <% articles.forEach(article => { %>
 <div class="card mt-4">
     <div class="card-body">
@@ -29,10 +29,13 @@
         </div>
 
         
+
+        
 </div>
 </div>
 
         <% }) %>
+        <% } %>
 
 </div>
 </body>
